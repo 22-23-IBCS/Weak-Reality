@@ -11,7 +11,7 @@ class GroceryStore():
                 self.Chocolatemilk = 1.5
                 self.Cafe = 3
                 self.Milk = 5.00
-        
+                self.manager = 'Frank'       
                 self.items = {"Apple":1, "Orange":1, 
                               "Tea":0.5, "Boba":4,
                               "Pizza":3, "Pasta":3,
@@ -25,7 +25,7 @@ class GroceryStore():
                 self.intro = "Hi, Welcome to AWS store. What can i help you today?"
                 self.order = []
         
-                     
+               
 
 
         def getinfo(self):
@@ -37,13 +37,14 @@ class GroceryStore():
         def setProduct(self):
                 return self.order
 
-
+        def askManager(self):
+                 print("Hi, i am the manager here. I can help you buy things today.")
 
 
 
 
 def main():
-
+    g = GroceryStore()
     print("Hi, Welcome to AWS store")
 
 
@@ -71,6 +72,7 @@ def main():
 
 
     toBuy = []
+    g.askManager()
     while True:
         res = input("What would you like to buy? Enter 'stop' if done\n")
         if res == "stop":
@@ -84,7 +86,6 @@ def main():
                 print("That would be $" + str(round(otherPrice*number, 2)) + " dollars")
     
     
-
 
 
 
